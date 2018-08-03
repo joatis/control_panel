@@ -1,0 +1,14 @@
+{
+  "name": "control_panel",
+  "version": "1.0.0",
+  "description": "A Control Panel application for an internet survey company.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Oatis",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-watch": "^5.0.0"
+  }
+}
