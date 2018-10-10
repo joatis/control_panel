@@ -4,6 +4,8 @@
 
 An 'organization' represents a group of organizations that access the system. Each organization name should be unique.
 
+An organization is associated with a user through the organization_user table.
+
 ## Properties
 
 * organization_id

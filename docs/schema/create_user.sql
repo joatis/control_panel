@@ -1,6 +1,5 @@
 CREATE TABLE `control_panel`.`user` (
   `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `organization_id` int(10) unsigned NOT NULL,
   `name_first` varchar(45) DEFAULT NULL,
   `name_last` varchar(45) DEFAULT NULL,
   `name_middle` varchar(45) DEFAULT NULL,
