@@ -10,6 +10,11 @@ A 'project' represents a body of work conducted on behalf of an organization. It
 * organization_id
 * name
 * status
+  * inactive
+  * active
+  * closed
+  * archived
+
 * last_updated_by
 * last_updated_dtm
 * created_by
@@ -41,8 +46,8 @@ none
 
 #### Summary
 
-The create  function is invoked when a POST request is made to the project route. If all required parameters are valid, a record is inserted into the 'project' table/collection. 
-The default value of status is 'new'.
+The create function is invoked when a POST request is made to the project route. If all required parameters are valid, a record is inserted into the 'project' table/collection. 
+The default value of status is 'inactive'.
 
 
 #### Responses
@@ -78,6 +83,8 @@ the HTTP status code and an array of error messages.
 
 * name
 * status
+
+
 
 #### URL
 
