@@ -3,6 +3,7 @@ CREATE TABLE `project` (
   `organization_id` int(10) unsigned NOT NULL,
   `name` varchar(255) NOT NULL,
   `status` int(10) unsigned NOT NULL,
+  `project_uuid` VARCHAR(36) NOT NULL,
   `last_updated_by` int(10) unsigned NOT NULL,
   `last_updated_dtm` datetime NOT NULL,
   `created_by` int(10) unsigned NOT NULL,

@@ -2,8 +2,8 @@
 
 ## Summary
 
-A 'user' represents a person who acceses the system. A user
-must belong to an 'organization' and have an email address.
+A 'user' represents a person who acceses the system. A user must belong to an 'organization' and have an email address.
+A user can be identified by APIs via the user_uuid, any relations made within the database should use the user_id field.
 
 An user is associated with a organization through the organization_user table.
 
@@ -14,6 +14,7 @@ An user is associated with a organization through the organization_user table.
 * name_middle
 * name_last
 * email_primary
+* user_uuid
 * password_hash
 * reset_password_hash
 * reset_password_dtm
@@ -51,7 +52,7 @@ name_middle
 
 #### Summary
 
-The create user function is invoked when a POST request is made to the user route. If all required parameters are valid, a record is inserted into the 'user' table/collection. 
+The create user function is invoked when a POST request is made to the user route. If all required parameters are valid, a record is inserted into the 'user' table/collection. The user_uuid should be created using the database UUID function output as a value.
 The email_primary value must be unique to every individual user. The default value of disabled should be false (0).
 
 The password value must be hashed before inserting into the database.
@@ -93,7 +94,7 @@ the HTTP status code and an array of error messages.
 
 #### Required Parameters
 
-1. user_id
+1. user_uuid
 
 
 #### Optional Fields
@@ -170,7 +171,7 @@ the HTTP status code and an array of error messages.
 
 #### Required Parameters
 
-1. user_id
+1. user_uuid
 
 #### Optional Fields
 
@@ -225,7 +226,7 @@ the HTTP status code and an array of error messages.
 
 #### Required Parameters
 
-1. user_id
+1. user_uuid
 2. password
 
 #### Optional Fields
@@ -234,7 +235,7 @@ None
 
 #### URL
 
-/user/set_password/<user_id>
+/user/<user_uuid>/set_password
 
 #### Summary
 
@@ -287,7 +288,7 @@ None
 
 #### URL
 
-/user/set_password_request/<email_primary>
+/user/set_password_request?email=<url encoded email_primary>
 
 #### Summary
 
@@ -336,6 +337,9 @@ the HTTP status code and an array of error messages.
 #### Optional Fields
 
 None
+
+#### HTTP METHOD
+POST
 
 #### URL
 
