@@ -36,7 +36,6 @@ An organization is associated with a user through the organization_project table
 1. organization_id
 2. name
 
-
 #### Optional Fields
 
 none
@@ -45,12 +44,11 @@ none
 
 /project
 
-#### Summary
+#### Create Summary
 
-The create function is invoked when a POST request is made to the project route. If all required parameters are valid, a record is inserted into the 'project' table/collection. 
+The create function is invoked when a POST request is made to the project route. If all required parameters are valid, a record is inserted into the 'project' table/collection.
 The default value of status is 'inactive'.
 The project_uuid should be created using the database UUID function output as a value.
-
 
 #### Responses
 
@@ -59,9 +57,8 @@ Invalid Request: 400 (Bad Request)
 
 #### Error Responses
 
-Error responses are composed of a JSON object that contains 
+Error responses are composed of a JSON object that contains
 the HTTP status code and an array of error messages.
-
 
 ##### 400
 
@@ -76,25 +73,22 @@ the HTTP status code and an array of error messages.
 
 ### Update
 
-#### Required Parameters
+#### Update Required Parameters
 
 1. id
 
-
-#### Optional Fields
+#### Update Optional Fields
 
 * name
 * status
 
-
-
-#### URL
+#### Update URL
 
 /project/<project_id>
 
-#### Summary
+#### Update Summary
 
-The update project function is invoked when a PUT request is made to the project route. If all required parameters are valid, a record is updated in the 'project' table/collection. 
+The update project function is invoked when a PUT request is made to the project route. If all required parameters are valid, a record is updated in the 'project' table/collection.
 
 This method should only be accessible to the logged in user, or a user with administrative privileges.
 
@@ -102,21 +96,20 @@ The update method should translate a status 'word' into a status code and save t
 
 The Update function should not allow for reassigning the organization_id, project_id, or project_uuid. If a project were to switch organizations, a new project record should be created.
 
-#### Responses
+#### Update Responses
 
 Success: 200 (OK)
 project_id does not exist:  404 (Not Found)
 Invalid Request: 400 (Bad Request)
 
+#### Update Error Responses
 
-#### Error Responses
-
-Error responses are composed of a JSON object that contains 
+Error responses are composed of a JSON object that contains
 the HTTP status code and an array of error messages.
 
-##### 400
+##### Update 400
 
-~~~~json 
+~~~~json
 {
     "code":400,
     "errors": [
@@ -125,9 +118,9 @@ the HTTP status code and an array of error messages.
 }
 ~~~~
 
-##### 404
+##### Update 404
 
-~~~~json 
+~~~~json
 {
     "code":404,
     "errors": [
