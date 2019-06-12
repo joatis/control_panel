@@ -1,0 +1,9 @@
+{
+    "database": {
+        "host":"localhost",
+        "type":"mysql",
+        "name":"control_panel",
+        "user":"test_admin",
+        "pass":"test_admin"
+    }
+}

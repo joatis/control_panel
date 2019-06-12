@@ -41,7 +41,7 @@ api/organization
 
 The create organization function is invoked when a POST request is made to the organization api route. If all required parameters are valid, a record is inserted into the 'organization' table/collection.
 The name value must be unique to every individual organization. The default value of disabled should be false (0).
-The organization_uuid should be created using the database UUID function output as a value.
+The organization_uuid should be created using the api scripts UUID function output as a value.
 
 #### Responses
 
