@@ -1,0 +1,9 @@
+The md docs should get updated.
+I shouldn't have used so many headers and subheaders especially in the error response section.
+Instead of a heading and a block of json of identical fields I should use a table.
+
+Forcing myself to write unit tests for the database and config classes challenged some of my
+initial assumptions. For instance, I was going to use a singleton for the configuartion class,
+but I realized I was solving that problem at the wrong level. The config should be an object and it
+is the apps job to make sure there is only one instance.
+The Unit Tests also challenged me to think how these different parts will interact with each other.

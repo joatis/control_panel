@@ -7,7 +7,7 @@ $requestBody = file_get_contents('php://input');
 
 $api = new API($client, $requestMethod, $requestBody);
 $organization = new Organization();
-$database =
+$database = new Database();
 
 switch($requestMethod){
     case 'POST':

@@ -1,3 +1,0 @@
-The md docs should get updated.
-I shouldn't have used so many headers and subheaders especially in the error response section.
-Instead of a heading and a block of json of identical fields I should use a table.

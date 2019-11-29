@@ -1,17 +1,18 @@
 <?php
-namespace joatis\ControlPanel;
-const CONFIG_JSON_PATH = "../config.json";
-require_once $CONFIG_JSON_PATH;
+namespace joatis\ControlPanel\libs;
 
 class Config {
-    private static $config = null;
+    private $config = null;
 
-    public static function getConfig() {
-        if (\isNull(this::$config)){
-            this::$config = json_decode($CONFIG_JSON_PATH);
-        }
-        else {
-            return this::$config;
-        }
+    public function __construct($config_path) {
+        $json = file_get_contents($config_path);
+        $this->config = json_decode($json);
+    }
+
+    public function get($key){
+        return $this->config->$key;
+    }
+    public function set($key, $val){
+        $this->config->$key = $val;
     }
 }

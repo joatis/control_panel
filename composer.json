@@ -2,12 +2,12 @@
     "name":"ControlPanel",
     "description":"A generic control panel for clients to monitor projects.",
     "require": {
-        "monolog/monolog": "^1.23",
+        "monolog/monolog": "^2.0",
         "guzzlehttp/guzzle": "^6.3"
     },
     "autoload": {
         "psr-4": {
-            "joatis\\ControlPanel\\":"src"
+            "joatis\\ControlPanel\\":"src/"
         }
     },
     "require-dev": {
