@@ -32,7 +32,7 @@ final class OrganizationTest extends TestCase {
 
     public function testCreateTestOrg()
     {
-        $data = array('name' => 'TestOrg'); 
+        $data = (object)array('name' => 'TestOrg'); 
         $org = new Organization;
         $org->create($data);
     }
