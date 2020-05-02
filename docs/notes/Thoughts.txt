@@ -7,3 +7,10 @@ initial assumptions. For instance, I was going to use a singleton for the config
 but I realized I was solving that problem at the wrong level. The config should be an object and it
 is the apps job to make sure there is only one instance.
 The Unit Tests also challenged me to think how these different parts will interact with each other.
+
+Thinking about boundries. Do I want to have my objects make database calls or should the object 
+call methods on a database object? Do I insert a Organization using the database class and then 
+pass the data to a Organization Create method and pass the database as a argument? The more I think 
+about this it seems to me that the Organization Create method should accept a database and call the 
+database's insert method. This would allow other methods to fetch the data and populate the objects 
+properties as needed.
